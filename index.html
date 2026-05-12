@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enrique Barranco — Sistemas, Redes & Automatización IA</title>
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">
+      <span class="brand-bracket">[</span>
+      <span class="brand-name">EB</span>
+      <span class="brand-bracket">]</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="toggler-icon"><i class="bi bi-grid-3x3"></i></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item">
+          <a class="nav-link" href="#hero"><i class="bi bi-house nav-icon"></i>Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sobre-mi"><i class="bi bi-person nav-icon"></i>Sobre mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experiencia"><i class="bi bi-briefcase nav-icon"></i>Experiencia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#educacion"><i class="bi bi-mortarboard nav-icon"></i>Educación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills"><i class="bi bi-cpu nav-icon"></i>Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto"><i class="bi bi-send nav-icon"></i>Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" class="hero-section">
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+
+  <div class="container hero-container">
+    <div class="row align-items-center min-vh-100 py-5">
+
+      <!-- LEFT: Text -->
+      <div class="col-lg-7 hero-text-col">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Disponible para nuevas oportunidades
+        </div>
+        <h1 class="hero-name">
+          Enrique<br/>
+          <span class="name-accent">Barranco</span>
+        </h1>
+        <div class="hero-subtitle">
+          <span class="subtitle-prefix">_</span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-description">
+          Técnico en Sistemas e Infraestructuras con experiencia en entornos Windows y Linux,
+          automatización de procesos con IA y administración de redes corporativas.
+          Siempre en busca del siguiente reto técnico.
+        </p>
+        <div class="hero-buttons">
+          <a href="#experiencia" class="btn-primary-custom">
+            <i class="bi bi-terminal"></i> Ver experiencia
+          </a>
+          <a href="#contacto" class="btn-secondary-custom">
+            <i class="bi bi-arrow-right"></i> Contactar
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Terminal card -->
+      <div class="col-lg-5 hero-terminal-col">
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <span class="t-dot t-red"></span>
+            <span class="t-dot t-yellow"></span>
+            <span class="t-dot t-green"></span>
+            <span class="t-title">enrique@sistemas:~</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">./iniciar_perfil.sh</span></div>
+            <div class="t-output t-delay-1">Iniciando perfil profesional...</div>
+            <div class="t-line t-delay-2"><span class="t-prompt">$</span> <span class="t-cmd">check --sistemas</span></div>
+            <div class="t-output t-ok t-delay-3"><i class="bi bi-check-circle-fill"></i> Windows Server ... <span class="t-status">OK</span></div>
+            <div class="t-output t-ok t-delay-3"><i class="bi bi-check-circle-fill"></i> Linux/ASIR      ... <span class="t-status">OK</span></div>
+            <div class="t-output t-ok t-delay-3"><i class="bi bi-check-circle-fill"></i> Active Directory... <span class="t-status">OK</span></div>
+            <div class="t-line t-delay-4"><span class="t-prompt">$</span> <span class="t-cmd">check --redes</span></div>
+            <div class="t-output t-ok t-delay-5"><i class="bi bi-check-circle-fill"></i> VLAN / Switching... <span class="t-status">OK</span></div>
+            <div class="t-output t-ok t-delay-5"><i class="bi bi-check-circle-fill"></i> DHCP / DNS      ... <span class="t-status">OK</span></div>
+            <div class="t-line t-delay-6"><span class="t-prompt">$</span> <span class="t-cmd">check --automatizacion-ia</span></div>
+            <div class="t-output t-ok t-delay-7"><i class="bi bi-check-circle-fill"></i> n8n / APIs      ... <span class="t-status">OK</span></div>
+            <div class="t-output t-ok t-delay-7"><i class="bi bi-check-circle-fill"></i> IA Workflows    ... <span class="t-status">OK</span></div>
+            <div class="t-line t-delay-8"><span class="t-prompt">$</span> <span class="t-cmd">status</span></div>
+            <div class="t-output t-ready t-delay-9">▶ Perfil listo. Disponible para nuevos proyectos.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- ===================== SOBRE MÍ ===================== -->
+<section id="sobre-mi" class="section-pad">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">01 /</span>
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="avatar-wrapper">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <i class="bi bi-person-badge avatar-icon"></i>
+            </div>
+          </div>
+          <div class="avatar-stats">
+            <div class="stat-pill">
+              <span class="stat-num">4+</span>
+              <span class="stat-label">Empresas</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">2</span>
+              <span class="stat-label">Titulaciones</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Curiosidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="about-text-block">
+          <p class="about-lead">
+            Soy técnico en sistemas informáticos y redes con una fuerte orientación hacia la automatización
+            inteligente de procesos y la administración de infraestructuras.
+          </p>
+          <p class="about-body">
+            Actualmente amplío mi formación cursando el Grado Superior de ASIR en el CES Ramón y Cajal,
+            consolidando conocimientos en Linux, virtualización, administración de redes y servicios en la nube.
+            Mi trayectoria abarca entornos tan diversos como despachos de abogados, fundaciones tecnológicas
+            y empresas de automatización con IA, lo que me ha forjado una visión técnica versátil y orientada
+            a resultados.
+          </p>
+          <p class="about-body">
+            Me motiva encontrar soluciones eficientes donde otros ven complejidad: desde montar y configurar
+            infraestructuras desde cero hasta integrar flujos de automatización que ahorran horas de trabajo
+            manual. Creo firmemente en el aprendizaje continuo y en la colaboración como motores del
+            crecimiento profesional.
+          </p>
+          <div class="about-tags">
+            <span class="about-tag">Windows Server</span>
+            <span class="about-tag">Linux</span>
+            <span class="about-tag">Redes</span>
+            <span class="about-tag">Virtualización</span>
+            <span class="about-tag">IA</span>
+            <span class="about-tag">n8n</span>
+            <span class="about-tag">Soporte Técnico</span>
+            <span class="about-tag">Active Directory</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCIA ===================== -->
+<section id="experiencia" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">02 /</span>
+      <h2 class="section-title">Experiencia</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="timeline">
+
+      <!-- LANTI AI -->
+      <div class="timeline-item">
+        <div class="timeline-connector">
+          <div class="timeline-node color-green">
+            <i class="bi bi-robot"></i>
+          </div>
+          <div class="timeline-vline"></div>
+        </div>
+        <div class="timeline-card glass-card color-green">
+          <div class="card-inner">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-company">LANTI AI</h3>
+                <h4 class="exp-role">Técnico de Automatización &amp; IA</h4>
+              </div>
+              <span class="exp-type-badge">Automatización · IA · Marketing</span>
+            </div>
+            <p class="exp-desc">Diseño e implementación de flujos de automatización inteligente con herramientas de IA. Integración de APIs y orquestación de procesos para reducir trabajo manual y mejorar la eficiencia operativa.</p>
+            <div class="skill-chips">
+              <span class="chip">Automatización de Procesos</span>
+              <span class="chip">Inteligencia Artificial</span>
+              <span class="chip">Marketing Digital</span>
+              <span class="chip">APIs</span>
+              <span class="chip">n8n</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grupo Solutia -->
+      <div class="timeline-item">
+        <div class="timeline-connector">
+          <div class="timeline-node color-teal">
+            <i class="bi bi-pc-display"></i>
+          </div>
+          <div class="timeline-vline"></div>
+        </div>
+        <div class="timeline-card glass-card color-teal">
+          <div class="card-inner">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-company">Grupo Solutia</h3>
+                <h4 class="exp-role">Técnico Informático</h4>
+              </div>
+              <span class="exp-type-badge">Sistemas · Hardware · Soporte</span>
+            </div>
+            <p class="exp-desc">Instalación, configuración y mantenimiento de equipos informáticos en entorno corporativo. Resolución de incidencias técnicas y soporte a usuarios finales con alta satisfacción de cliente.</p>
+            <div class="skill-chips">
+              <span class="chip">Instalación de Equipos</span>
+              <span class="chip">Configuración de Sistemas</span>
+              <span class="chip">Soporte Técnico</span>
+              <span class="chip">Redes</span>
+              <span class="chip">Hardware</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CIAC -->
+      <div class="timeline-item">
+        <div class="timeline-connector">
+          <div class="timeline-node color-lime">
+            <i class="bi bi-server"></i>
+          </div>
+          <div class="timeline-vline"></div>
+        </div>
+        <div class="timeline-card glass-card color-lime">
+          <div class="card-inner">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-company">CIAC</h3>
+                <h4 class="exp-role">Técnico Informático</h4>
+              </div>
+              <span class="exp-type-badge">Windows · Hardware · Soporte</span>
+            </div>
+            <p class="exp-desc">Administración de sistemas Windows, gestión de hardware y prestación de soporte técnico especializado. Configuración y mantenimiento de equipos en entorno institucional.</p>
+            <div class="skill-chips">
+              <span class="chip">Windows Server</span>
+              <span class="chip">Hardware</span>
+              <span class="chip">Sistemas</span>
+              <span class="chip">Soporte Técnico</span>
+              <span class="chip">Diagnóstico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Despacho Abogados GAYA -->
+      <div class="timeline-item">
+        <div class="timeline-connector">
+          <div class="timeline-node color-emerald">
+            <i class="bi bi-briefcase"></i>
+          </div>
+        </div>
+        <div class="timeline-card glass-card color-emerald">
+          <div class="card-inner">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-company">Despacho Abogados GAYA</h3>
+                <h4 class="exp-role">Técnico de Soporte &amp; Administración</h4>
+              </div>
+              <span class="exp-type-badge">Soporte · Reparación · Administración</span>
+            </div>
+            <p class="exp-desc">Mantenimiento y reparación del parque informático del despacho. Soporte técnico a profesionales jurídicos y gestión administrativa de incidencias tecnológicas.</p>
+            <div class="skill-chips">
+              <span class="chip">Reparación de Equipos</span>
+              <span class="chip">Administración</span>
+              <span class="chip">Soporte</span>
+              <span class="chip">Ofimática</span>
+              <span class="chip">Mantenimiento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCACIÓN ===================== -->
+<section id="educacion" class="section-pad">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">03 /</span>
+      <h2 class="section-title">Educación</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- ASIR -->
+      <div class="col-lg-6">
+        <div class="edu-card glass-card">
+          <div class="edu-card-header">
+            <div class="edu-icon-wrap">
+              <i class="bi bi-hdd-network"></i>
+            </div>
+            <div class="edu-meta">
+              <span class="edu-badge">Grado Superior</span>
+              <span class="edu-status status-active">
+                <span class="status-dot"></span>En curso
+              </span>
+            </div>
+          </div>
+          <div class="edu-body">
+            <h3 class="edu-degree">ASIR</h3>
+            <p class="edu-full">Administración de Sistemas Informáticos en Red</p>
+            <p class="edu-center"><i class="bi bi-building"></i> C.E.S Ramón y Cajal</p>
+            <p class="edu-desc">Grado Superior enfocado en administración de infraestructuras, servicios de red, virtualización y seguridad informática.</p>
+            <div class="skill-chips">
+              <span class="chip chip-sm">Linux</span>
+              <span class="chip chip-sm">Redes</span>
+              <span class="chip chip-sm">Windows Server</span>
+              <span class="chip chip-sm">Virtualización</span>
+              <span class="chip chip-sm">Scripting</span>
+              <span class="chip chip-sm">Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMR -->
+      <div class="col-lg-6">
+        <div class="edu-card glass-card">
+          <div class="edu-card-header">
+            <div class="edu-icon-wrap">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <div class="edu-meta">
+              <span class="edu-badge">Grado Medio</span>
+              <span class="edu-status status-done">
+                <span class="status-dot"></span>Completado
+              </span>
+            </div>
+          </div>
+          <div class="edu-body">
+            <h3 class="edu-degree">SMR</h3>
+            <p class="edu-full">Sistemas Microinformáticos y Redes</p>
+            <p class="edu-center"><i class="bi bi-building"></i> CES Lope de Vega</p>
+            <p class="edu-desc">Formación técnica en montaje, configuración y mantenimiento de sistemas microinformáticos y redes de área local.</p>
+            <div class="skill-chips">
+              <span class="chip chip-sm">Hardware</span>
+              <span class="chip chip-sm">Sistemas</span>
+              <span class="chip chip-sm">Soporte Técnico</span>
+              <span class="chip chip-sm">Ofimática</span>
+              <span class="chip chip-sm">Redes Locales</span>
+              <span class="chip chip-sm">Mantenimiento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="section-pad section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">04 /</span>
+      <h2 class="section-title">Skills</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Sistemas -->
+      <div class="col-lg-6">
+        <div class="skill-card glass-card color-green">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon color-green"><i class="bi bi-hdd-stack"></i></div>
+            <h3 class="skill-cat-name">Sistemas</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-windows"></i></span>
+                <span class="skill-item-name">Windows Server</span>
+                <span class="skill-item-pct">85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-green" style="--bar-w:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-terminal"></i></span>
+                <span class="skill-item-name">Linux</span>
+                <span class="skill-item-pct">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-green" style="--bar-w:80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-diagram-3"></i></span>
+                <span class="skill-item-name">Active Directory</span>
+                <span class="skill-item-pct">78%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-green" style="--bar-w:78%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-boxes"></i></span>
+                <span class="skill-item-name">VirtualBox</span>
+                <span class="skill-item-pct">82%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-green" style="--bar-w:82%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Redes -->
+      <div class="col-lg-6">
+        <div class="skill-card glass-card color-teal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon color-teal"><i class="bi bi-diagram-2"></i></div>
+            <h3 class="skill-cat-name">Redes</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-share"></i></span>
+                <span class="skill-item-name">VLAN</span>
+                <span class="skill-item-pct">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-teal" style="--bar-w:80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-router"></i></span>
+                <span class="skill-item-name">DHCP</span>
+                <span class="skill-item-pct">85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-teal" style="--bar-w:85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-globe2"></i></span>
+                <span class="skill-item-name">DNS</span>
+                <span class="skill-item-pct">83%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-teal" style="--bar-w:83%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-git-merge"></i></span>
+                <span class="skill-item-name">Switching</span>
+                <span class="skill-item-pct">78%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-teal" style="--bar-w:78%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automatización -->
+      <div class="col-lg-6">
+        <div class="skill-card glass-card color-lime">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon color-lime"><i class="bi bi-robot"></i></div>
+            <h3 class="skill-cat-name">Automatización</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-cpu-fill"></i></span>
+                <span class="skill-item-name">IA / LLMs</span>
+                <span class="skill-item-pct">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-lime" style="--bar-w:80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-braces"></i></span>
+                <span class="skill-item-name">APIs REST</span>
+                <span class="skill-item-pct">75%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-lime" style="--bar-w:75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-diagram-3-fill"></i></span>
+                <span class="skill-item-name">n8n</span>
+                <span class="skill-item-pct">82%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-lime" style="--bar-w:82%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-gear-wide-connected"></i></span>
+                <span class="skill-item-name">Automatización</span>
+                <span class="skill-item-pct">84%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-lime" style="--bar-w:84%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soporte & Herramientas -->
+      <div class="col-lg-6">
+        <div class="skill-card glass-card color-emerald">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon color-emerald"><i class="bi bi-tools"></i></div>
+            <h3 class="skill-cat-name">Soporte &amp; Herramientas</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-headset"></i></span>
+                <span class="skill-item-name">Soporte Técnico</span>
+                <span class="skill-item-pct">92%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-emerald" style="--bar-w:92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-motherboard"></i></span>
+                <span class="skill-item-name">Hardware</span>
+                <span class="skill-item-pct">88%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-emerald" style="--bar-w:88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-file-earmark-text"></i></span>
+                <span class="skill-item-name">Ofimática</span>
+                <span class="skill-item-pct">90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-emerald" style="--bar-w:90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-meta">
+                <span class="skill-item-icon"><i class="bi bi-search"></i></span>
+                <span class="skill-item-name">Diagnóstico</span>
+                <span class="skill-item-pct">86%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill color-emerald" style="--bar-w:86%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+<section id="contacto" class="section-pad">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">05 /</span>
+      <h2 class="section-title">Contacto</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <p class="contact-lead">
+          ¿Tienes un proyecto o una oportunidad interesante?<br/>
+          <span class="accent-text">Hablemos.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center g-4 mt-2">
+
+      <div class="col-lg-4 col-md-6">
+        <a href="https://www.linkedin.com/in/enrique-barranco-m%C3%A1rquez-569513352/" target="_blank" class="contact-card glass-card contact-linkedin">
+          <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
+          <div class="contact-info">
+            <span class="contact-platform">LinkedIn</span>
+            <span class="contact-handle">Enrique Barranco Márquez</span>
+            <span class="contact-desc">Perfil profesional</span>
+          </div>
+          <div class="contact-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="https://github.com/Kikee04" target="_blank" class="contact-card glass-card contact-github">
+          <div class="contact-icon"><i class="bi bi-github"></i></div>
+          <div class="contact-info">
+            <span class="contact-platform">GitHub</span>
+            <span class="contact-handle">Kikee04</span>
+            <span class="contact-desc">Repositorios y proyectos</span>
+          </div>
+          <div class="contact-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="mailto:trabajoenrique05@gmail.com" class="contact-card glass-card contact-email">
+          <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+          <div class="contact-info">
+            <span class="contact-platform">Email</span>
+            <span class="contact-handle">trabajoenrique05@gmail.com</span>
+            <span class="contact-desc">Contacto directo</span>
+          </div>
+          <div class="contact-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom terminal line -->
+    <div class="contact-terminal">
+      <span class="t-prompt">$</span>
+      <span class="t-cmd">echo "Listo para el próximo reto. Contacta conmigo."</span>
+      <span class="cursor-blink">|</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-brand">Enrique Barranco</span>
+      <span class="footer-sep">//</span>
+      <span class="footer-copy">Sistemas · Redes · Automatización IA</span>
+    </div>
+    <div class="footer-credit">
+      <span class="t-prompt">$</span> construido con <span class="accent-text">HTML + Bootstrap</span> — 2025
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// ── Navbar scroll ──────────────────────────
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('navbar-scrolled');
+  } else {
+    navbar.classList.remove('navbar-scrolled');
+  }
+});
+
+// ── Active nav link on scroll ──────────────
+const sections = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-link');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 100;
+    if (window.scrollY >= top) current = sec.getAttribute('id');
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+  });
+});
+
+// ── Typed text effect ─────────────────────
+const phrases = [
+  'Técnico en Sistemas',
+  'Administrador de Redes',
+  'Automatización con IA',
+  'Especialista en Infraestructura',
+];
+let pi = 0, ci = 0, deleting = false;
+const el = document.getElementById('typedText');
+
+function type() {
+  const phrase = phrases[pi];
+  if (!deleting) {
+    el.textContent = phrase.substring(0, ci + 1);
+    ci++;
+    if (ci === phrase.length) {
+      deleting = true;
+      setTimeout(type, 2000);
+      return;
+    }
+  } else {
+    el.textContent = phrase.substring(0, ci - 1);
+    ci--;
+    if (ci === 0) {
+      deleting = false;
+      pi = (pi + 1) % phrases.length;
+    }
+  }
+  setTimeout(type, deleting ? 55 : 95);
+}
+setTimeout(type, 800);
+
+// ── Skill bar animation on scroll ─────────
+const skillBars = document.querySelectorAll('.skill-bar-fill');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.style.getPropertyValue('--bar-w') || entry.target.getAttribute('style').match(/--bar-w:([\d%]+)/)?.[1] || '0%';
+      entry.target.classList.add('animated');
+    }
+  });
+}, { threshold: 0.3 });
+skillBars.forEach(bar => observer.observe(bar));
+
+// ── Smooth scroll ─────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // close mobile menu
+    const menu = document.getElementById('navMenu');
+    if (menu.classList.contains('show')) {
+      bootstrap.Collapse.getInstance(menu)?.hide();
+    }
+  });
+});
+
+// ── Fade-in on scroll ─────────────────────
+const fadeEls = document.querySelectorAll('.timeline-item, .edu-card, .skill-card, .contact-card, .about-text-block');
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      fadeObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+fadeEls.forEach(el => { el.classList.add('fade-item'); fadeObs.observe(el); });
+</script>
+</body>
+</html>
